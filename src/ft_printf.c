@@ -6,7 +6,7 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:45:14 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/03 11:44:05 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/10/03 12:01:54 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
@@ -54,8 +54,8 @@ int	ft_printf(char const *str, ...)
 
 int	main()
 {
-	int a = -984;
-	void *b = "984";
+	int a = 100;
+	void *b = &a;
 	printf("Numero de caracteres: %d\n", ft_printf("Hello %u\n", a));
 	printf("Void: %p\n", b);	
 	return (0);

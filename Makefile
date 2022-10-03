@@ -14,7 +14,7 @@ PRINTF_SRC = src/
 
 OB_PATH = obj/
 
-PF_FILES = ft_putchar ft_putint ft_putstr
+PF_FILES = ft_putchar ft_putint ft_putstr ft_start ft_putnbr ft_unsigned
 
 FILES_SRC += $(addprefix $(OB_PATH), $(PF_FILES))
 
