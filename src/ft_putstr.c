@@ -6,10 +6,17 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:10:14 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/09/20 12:09:36 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:58:05 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
+
+/*
+ * IN:
+ * 		char *str = the string we want to print.
+ * OUT:
+ * 		int size = the number of characters we printed.
+ */
 
 int	ft_putstr(char *str)
 {

@@ -6,10 +6,15 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:47:31 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/09/19 12:01:58 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/09/27 09:56:39 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
+
+/*
+ * OUT:
+ * 		t_var var = Struct with the variables initialized
+ */
 
 t_var	ft_start()
 {

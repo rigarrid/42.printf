@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putint.c                                        :+:      :+:    :+:   */
+/*   ft_hex.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 11:49:44 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/03 10:37:11 by rigarrid         ###   ########.fr       */
+/*   Created: 2022/09/29 10:41:52 by rigarrid          #+#    #+#             */
+/*   Updated: 2022/09/29 12:04:45 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
-#include "../libft/libft.h"
 
-/*
- * IN:
- * 		int c = the integer we want to print.
- * OUT:
- * 		int size = the number of characters we printed.
- */
-
-int	ft_putint(int c)
+int	ft_hex(unsigned int num, char f)
 {
-	char	*num;
-	int		con;
-	int		size;
+	int	size;
 
-	con = 0;
 	size = 0;
-	num = ft_itoa(c);
-	while (num[con])
+	if (num >= 16)
 	{
-		write(1, &num[con++], 1);
-		size++;
+		size += ft_hex(num / 16, f);
+		size += ft_hex(num % 16, f);
+	}
+	else
+	{
+		if (num <= 9)
+			size += ft_putchar(num + '0');
+		else
+		{
+			if (f == 'X')
+				size += ft_putchar(num - 10 + 'A');
+			if (f == 'x')
+				size += ft_putchar(num - 10 + 'a');
+		}
 	}
 	return (size);
 }
