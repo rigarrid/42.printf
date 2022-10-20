@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_voidhex.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 12:32:07 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/18 11:58:23 by rigarrid         ###   ########.fr       */
+/*   Created: 2022/10/04 09:39:07 by rigarrid          #+#    #+#             */
+/*   Updated: 2022/10/19 11:45:28 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
 
-/*
- * IN:
- * 		int c = the ascii value of the character we want to print.
- * OUT:
- * 		int size = the number of characters we printed. 
- */
-
-int	ft_putchar(int c)
+int	ft_voidhex(void *pointer)
 {
 	int	size;
-
-	size = 1;
-	write(1, &c, 1);
+	
+	size = write(1, "0x", 2);
+	size += ft_hex((unsigned long )pointer, 'x');
 	return (size);
 }
+
+/*int main()
+{
+	int	a;
+	void *p;
+
+	a = 100;
+	p = &a;
+	ft_voidhex(p);
+	return (0);
+}*/

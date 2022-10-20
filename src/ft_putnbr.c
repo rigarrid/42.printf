@@ -6,12 +6,12 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:05:08 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/03 11:17:03 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/10/20 11:30:05 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
 
-int	ft_putnbr(int nb)
+int	ft_putnbr(long int nb)
 {
 	int	size;
 

@@ -6,22 +6,17 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:17:01 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/03 11:20:06 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/10/04 11:57:16 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
 
-int	ft_unsigned(int nb)
+int	ft_unsigned(unsigned int nb)
 {
 	int	size;
 
 	size = 0;
-	if (nb == -2147483648)
-	{
-		size += ft_putchar('2');
-		size += ft_putnbr(147483648);
-	}
-	else if (nb < 0)
+	if (nb < 0)
 	{
 		size += ft_putnbr(nb *= -1);
 	}

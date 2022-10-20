@@ -6,7 +6,7 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:45:14 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/03 12:01:54 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/10/20 12:14:06 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
@@ -37,16 +37,19 @@ int	ft_printf(char const *str, ...)
 			else if (str[var.c + 1] == 'u')
 				var.size += ft_unsigned(va_arg(var.param, unsigned int));
 			else if (str[var.c + 1] == 'X' || str[var.c + 1] == 'x')
-				var.size += ft_hex(va_arg(var.param, unsigned int), str[var.c + 1]);
+				var.size += ft_hex(va_arg(var.param,
+							unsigned int), str[var.c + 1]);
 			else if (str[var.c + 1] == 'd')
 				var.size += ft_putnbr(va_arg(var.param, int));
 			else if (str[var.c + 1] == '%')
 				var.size += ft_putchar('%');
+			else if (str[var.c + 1] == 'p')
+				var.size += ft_voidhex(va_arg(var.param, void *));
 			var.c += 2;
 		}
-	write(1, &str[var.c], 1);
-	var.size++;
-	var.c++;
+		write(1, &str[var.c], 1);
+		var.size++;
+		var.c++;
 	}
 	va_end(var.param);
 	return (var.size);
@@ -55,8 +58,9 @@ int	ft_printf(char const *str, ...)
 int	main()
 {
 	int a = 100;
-	void *b = &a;
-	printf("Numero de caracteres: %d\n", ft_printf("Hello %u\n", a));
-	printf("Void: %p\n", b);	
+	void *p;
+	p = &a;
+	printf("Numero de caracteres: %d\n", ft_printf("%d\n", a));
+	printf("Numero original: %d\n", printf("%p\n", p));	
 	return (0);
 }

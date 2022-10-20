@@ -6,7 +6,7 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:11:17 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/03 11:53:15 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/10/20 12:14:21 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef PRINTF_H
@@ -31,8 +31,9 @@ int	ft_putstr(char *str);
 int	ft_putchar(int c);
 int	ft_putint(int c);
 int	printf(char const *str, ...);
-int	ft_hex(unsigned int num, const char f);
-int	ft_putnbr(int nb);
-int	ft_unsigned(int nb);
+int	ft_hex(unsigned long int num, const char f);
+int	ft_putnbr(long int nb);
+int	ft_unsigned(unsigned int nb);
+int	ft_voidhex(void *pointer);
 
 #endif

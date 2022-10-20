@@ -6,12 +6,12 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:41:52 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/09/29 12:04:45 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:16:42 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "printf.h"
 
-int	ft_hex(unsigned int num, char f)
+int	ft_hex(unsigned long int num, char f)
 {
 	int	size;
 
