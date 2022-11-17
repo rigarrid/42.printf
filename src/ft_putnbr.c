@@ -6,10 +6,10 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:05:08 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/20 11:30:05 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/16 10:13:13 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_putnbr(long int nb)
 {
@@ -25,7 +25,8 @@ int	ft_putnbr(long int nb)
 	else if (nb < 0)
 	{
 		size += ft_putchar('-');
-		size += ft_putnbr(nb *= -1);
+		nb *= -1;
+		size += ft_putnbr(nb);
 	}
 	else if (nb > 9)
 	{

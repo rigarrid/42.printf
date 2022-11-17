@@ -6,10 +6,10 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:10:14 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/09/27 09:58:05 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/17 12:15:15 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "../includes/ft_printf.h"
 
 /*
  * IN:
@@ -23,7 +23,10 @@ int	ft_putstr(char *str)
 	int	size;
 
 	size = 0;
-	while (str[size])
-		write(1, &str[size++], 1);
+	if (str == NULL)
+		size = ft_printf("(null)");
+	else
+		while (str[size])
+			write(1, &str[size++], 1);
 	return (size);
 }

@@ -6,33 +6,33 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = include
+INCLUDES = includes/
 
 LB_PATH = libft/
+
+LB_LIB  = $(addprefix $(LB_PATH), libft.a)
 
 PRINTF_SRC = src/
 
 OB_PATH = obj/
 
-PF_FILES = ft_putchar ft_putint ft_putstr ft_start ft_putnbr ft_unsigned
-
-FILES_SRC += $(addprefix $(OB_PATH), $(PF_FILES))
+PF_FILES = ft_putchar ft_putstr ft_start ft_putnbr ft_unsigned ft_printf ft_hex ft_voidhex
 
 FILES_OBJ = $(addprefix $(OB_PATH), $(addsuffix .o, $(PF_FILES)))
 
 #####################
 ### PROGRAM RULES ###
 #####################
+#@mv libft.a $(NAME)
 
-all: libft.a $(NAME)
+all: $(NAME)
 
-libft.a: $(LB_PATH)
+$(LB_LIB): $(LB_PATH)
 	@make -C libft
-	@cp libft/libft.a .
-	@mv libft.a $(NAME)
+	@cp libft/libft.a $(NAME)
 
-$(NAME): $(FILES_OBJ)
-	@ar rsc $(NAME) $(FILES_OBJ)
+$(NAME): $(LB_LIB) $(FILES_OBJ)
+	@ar -rsc $(NAME) $(FILES_OBJ)
 	@echo "compiled $(NAME)"
 
 $(OB_PATH)%.o: $(PRINTF_SRC)%.c | DIRECTORIES

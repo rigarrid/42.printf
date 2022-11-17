@@ -6,10 +6,10 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 12:32:07 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/18 11:58:23 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/17 10:51:34 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "../includes/ft_printf.h"
 
 /*
  * IN:
@@ -20,9 +20,6 @@
 
 int	ft_putchar(int c)
 {
-	int	size;
-
-	size = 1;
 	write(1, &c, 1);
-	return (size);
+	return (1);
 }

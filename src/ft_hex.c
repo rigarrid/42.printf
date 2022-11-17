@@ -6,10 +6,10 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:41:52 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/10/19 11:16:42 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/16 10:12:14 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "printf.h"
+#include "../includes/ft_printf.h"
 
 int	ft_hex(unsigned long int num, char f)
 {
