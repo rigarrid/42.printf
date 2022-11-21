@@ -6,10 +6,17 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:17:01 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/11/16 10:12:52 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/21 09:53:12 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/ft_printf.h"
+
+/*
+ * IN:
+ * 		unsigned int nb = the value we want to print
+ * OUT:
+ * 		size = the number of characters the function printed
+ */
 
 int	ft_unsigned(unsigned int nb)
 {

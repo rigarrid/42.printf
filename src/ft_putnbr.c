@@ -6,10 +6,17 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:05:08 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/11/16 10:13:13 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/21 10:57:44 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/ft_printf.h"
+
+/*
+ * IN:
+ * 		long int nb = the value we want to print
+ * OUT:
+ * 		size = the number of characters that we printed
+ */
 
 int	ft_putnbr(long int nb)
 {

@@ -6,10 +6,17 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 09:39:07 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/11/16 10:13:38 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/21 10:53:29 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/ft_printf.h"
+
+/*
+ * IN:
+ * 		void *pointer = the pointer we want to print
+ * OUT:
+ * 		int size = the number of characters we printed
+ */
 
 int	ft_voidhex(void *pointer)
 {
@@ -19,14 +26,3 @@ int	ft_voidhex(void *pointer)
 	size += ft_hex((unsigned long )pointer, 'x');
 	return (size);
 }
-
-/*int main()
-{
-	int	a;
-	void *p;
-
-	a = 100;
-	p = &a;
-	ft_voidhex(p);
-	return (0);
-}*/

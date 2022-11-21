@@ -6,10 +6,18 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:41:52 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/11/16 10:12:14 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/21 10:53:38 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/ft_printf.h"
+
+/*
+ * IN:
+ * 		unsigned lon int num = the value that we want to print in hexadecimal
+ * 		char f = the character we use to know if we want upper case or lower case
+ * OUT:
+ * 		int size = the number of characters the function printed
+ */
 
 int	ft_hex(unsigned long int num, char f)
 {

@@ -23,7 +23,6 @@ FILES_OBJ = $(addprefix $(OB_PATH), $(addsuffix .o, $(PF_FILES)))
 #####################
 ### PROGRAM RULES ###
 #####################
-#@mv libft.a $(NAME)
 
 all: $(NAME)
 

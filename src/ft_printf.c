@@ -6,7 +6,7 @@
 /*   By: rigarrid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 10:45:14 by rigarrid          #+#    #+#             */
-/*   Updated: 2022/11/17 12:15:40 by rigarrid         ###   ########.fr       */
+/*   Updated: 2022/11/21 09:53:08 by rigarrid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/ft_printf.h"
@@ -18,7 +18,7 @@
  * 		int size = the number of character that we are printing
  * 		char const *str = The string that contains the information
  * 	OUT:
- * 		int	var.size = the number of characters that the function printed
+ * 		int	var.size = the number of characters the function printed
  */
 
 static int	put(void *a, int c, int size, char const *str)
@@ -44,7 +44,7 @@ static int	put(void *a, int c, int size, char const *str)
  * IN:
  * 		char const *str = The string that contains the information
  * 	OUT:
- * 		int	var.size = the number of characters that the function printed
+ * 		int	var.size = the number of characters the function printed
  */
 
 int	ft_printf(char const *str, ...)
@@ -74,7 +74,7 @@ int	ft_printf(char const *str, ...)
 {
 	int a;
 	a = ft_printf(" NULL %s NULL ", NULL);
-	printf("%d\n", a);
+	printf("\n%d\n", a);
 	printf("Numero original: %d\n", printf(" NULL %s NULL ", NULL));	
 	return (0);
 }*/
