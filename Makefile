@@ -27,6 +27,7 @@ FILES_OBJ = $(addprefix $(OB_PATH), $(addsuffix .o, $(PF_FILES)))
 all: $(NAME)
 
 $(LB_LIB): $(LB_PATH)
+	@mkdir -p $(OB_PATH)
 	@make -C libft
 	@cp libft/libft.a $(NAME)
 
@@ -34,12 +35,9 @@ $(NAME): $(LB_LIB) $(FILES_OBJ)
 	@ar -rsc $(NAME) $(FILES_OBJ)
 	@echo "compiled $(NAME)"
 
-$(OB_PATH)%.o: $(PRINTF_SRC)%.c | DIRECTORIES
+$(OB_PATH)%.o: $(PRINTF_SRC)%.c
 	@$(CC) $(CFLAGS) -I $(INCLUDES) -c $< -o $@
 	@echo "compiled object $@"
-
-DIRECTORIES:
-	@mkdir -p $(OB_PATH)
 
 ###################
 ### CLEAN RULES ###
